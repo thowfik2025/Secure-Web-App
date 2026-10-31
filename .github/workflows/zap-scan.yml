@@ -1,0 +1,23 @@
+name: OWASP ZAP Scan
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  zap-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run OWASP ZAP Scan
+        uses: zaproxy/action-baseline@v0.15.0
+        with:
+          target: 'https://YOUR-USERNAME.github.io/Secure-Web-App/'
+          allow_issue_writing: false
