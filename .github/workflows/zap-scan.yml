@@ -19,5 +19,5 @@ jobs:
       - name: Run OWASP ZAP Scan
         uses: zaproxy/action-baseline@v0.15.0
         with:
-          target: 'https://YOUR-USERNAME.github.io/Secure-Web-App/'
+          target: target: 'https://thowfik2025.github.io/Secure-Web-App/'
           allow_issue_writing: false
